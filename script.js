@@ -1,30 +1,32 @@
 const products = {
-  "signature-leotard": { category: "Leotards", name: "SIGNATURE LEOTARD", price: 148000, image: "assets/products/signature-leotard.png", description: "Minimal studio bodysuit", detail: "미니멀한 라인과 섬세한 스트랩 포인트가 있는 ETOILE의 시그니처 레오타드입니다.", sizes: ["XS", "S", "M", "L"] },
-  "square-neck-leotard": { category: "Leotards", name: "SQUARE NECK LEOTARD", price: 138000, image: "assets/products/square-neck-leotard.png", description: "Clean square neckline", detail: "데일리 수업과 촬영룩 모두에 어울리는 스퀘어 넥 레오타드입니다.", sizes: ["XS", "S", "M", "L"] },
-  "low-back-leotard": { category: "Leotards", name: "LOW BACK LEOTARD", price: 152000, image: "assets/products/low-back-leotard.png", description: "Elegant low-back line", detail: "등 라인이 우아하게 드러나는 로우백 디자인입니다.", sizes: ["XS", "S", "M", "L"] },
-  "long-sleeve-leotard": { category: "Leotards", name: "LONG SLEEVE LEOTARD", price: 158000, image: "assets/products/long-sleeve-leotard.png", description: "Warm studio silhouette", detail: "쌀쌀한 스튜디오에서도 단정한 라인을 유지하는 롱슬리브 레오타드입니다.", sizes: ["XS", "S", "M", "L"] },
+  "square-neck-white": { category: "Leotards", name: "SQUARE NECK WHITE", price: 138000, image: "assets/products/leotard-square-neck-white.png", description: "Clean white square neckline", detail: "화이트 컬러의 미니멀한 스퀘어 넥 레오타드입니다. 밝은 스튜디오 룩에 가장 잘 어울립니다.", sizes: ["XS", "S", "M", "L"] },
+  "scoop-back-dust-pink": { category: "Leotards", name: "SCOOP BACK DUST PINK", price: 148000, image: "assets/products/leotard-scoop-back-dust-pink.png", description: "Soft dust pink back line", detail: "더스트 핑크 컬러와 부드러운 스쿱 백 라인이 어우러진 레오타드입니다.", sizes: ["XS", "S", "M", "L"] },
+  "cap-sleeve-lavender": { category: "Leotards", name: "CAP SLEEVE LAVENDER", price: 152000, image: "assets/products/leotard-cap-sleeve-lavender.png", description: "Muted lavender cap sleeve", detail: "라벤더 컬러의 캡 슬리브 레오타드로 여성스럽고 단정한 실루엣을 제안합니다.", sizes: ["XS", "S", "M", "L"] },
+  "wide-strap-black": { category: "Leotards", name: "WIDE STRAP BLACK", price: 158000, image: "assets/products/leotard-wide-strap-black.png", description: "Classic black studio piece", detail: "블랙 컬러의 와이드 스트랩 레오타드입니다. 가장 클래식한 ETOILE 스튜디오 룩입니다.", sizes: ["XS", "S", "M", "L"] },
+  "long-sleeve-ivory": { category: "Leotards", name: "LONG SLEEVE IVORY", price: 168000, image: "assets/products/leotard-long-sleeve-ivory.png", description: "Soft ivory long sleeve", detail: "아이보리 컬러의 롱슬리브 레오타드로 워밍업과 수업 전후 모두에 어울립니다.", sizes: ["XS", "S", "M", "L"] },
+  "sweetheart-navy": { category: "Leotards", name: "SWEETHEART NAVY", price: 158000, image: "assets/products/leotard-sweetheart-navy.png", description: "Deep navy sweetheart line", detail: "네이비 컬러의 스윗하트 넥 레오타드입니다. 블랙보다 부드럽고 세련된 무드를 줍니다.", sizes: ["XS", "S", "M", "L"] },
 
-  "ballet-skirt": { category: "Skirts", name: "BALLET SKIRT", price: 92000, image: "assets/products/ballet-skirt.png", description: "Light wrap silhouette", detail: "가볍게 감기는 랩 실루엣으로 레오타드와 타이즈 위에 자연스럽게 어울리는 스커트입니다.", sizes: ["S", "M", "L"] },
-  "mesh-wrap-skirt": { category: "Skirts", name: "MESH WRAP SKIRT", price: 88000, image: "assets/products/mesh-wrap-skirt.png", description: "Sheer layered mesh", detail: "레이어드가 아름다운 메쉬 랩 스커트입니다.", sizes: ["S", "M", "L"] },
-  "chiffon-midi-skirt": { category: "Skirts", name: "CHIFFON MIDI SKIRT", price: 108000, image: "assets/products/chiffon-midi-skirt.png", description: "Soft city-length skirt", detail: "수업 후 외출까지 이어지는 미디 기장의 쉬폰 스커트입니다.", sizes: ["S", "M", "L"] },
+  "ballet-skirt-dust-pink": { category: "Skirts", name: "BALLET SKIRT DUST PINK", price: 92000, image: "assets/products/ballet-skirt.png", description: "Light pink wrap silhouette", detail: "더스트 핑크 컬러의 가벼운 랩 실루엣 스커트입니다.", sizes: ["S", "M", "L"] },
+  "mesh-wrap-pink": { category: "Skirts", name: "MESH WRAP PINK", price: 88000, image: "assets/products/mesh-wrap-skirt.png", description: "Sheer pink layered mesh", detail: "핑크 톤의 레이어드 메쉬 랩 스커트입니다.", sizes: ["S", "M", "L"] },
+  "chiffon-midi-blush": { category: "Skirts", name: "CHIFFON MIDI BLUSH", price: 108000, image: "assets/products/chiffon-midi-skirt.png", description: "Soft blush city-length skirt", detail: "블러시 핑크 톤의 미디 기장 쉬폰 스커트입니다.", sizes: ["S", "M", "L"] },
   "dust-pink-skirt": { category: "Skirts", name: "DUST PINK SKIRT", price: 96000, image: "assets/products/dust-pink-skirt.png", description: "Soft ballet pink tone", detail: "ETOILE의 더스트 핑크 무드를 담은 발레 스커트입니다.", sizes: ["S", "M", "L"] },
 
-  "ballet-shorts": { category: "Ballet Shorts", name: "BALLET SHORTS", price: 86000, image: "assets/products/ballet-shorts.png", description: "High-rise training shorts", detail: "하이라이즈 실루엣으로 움직임을 안정적으로 잡아주는 발레 트레이닝 쇼츠입니다.", sizes: ["S", "M", "L"] },
-  "modal-studio-shorts": { category: "Ballet Shorts", name: "MODAL STUDIO SHORTS", price: 82000, image: "assets/products/modal-studio-shorts.png", description: "Soft modal touch", detail: "부드러운 모달 터치감으로 매일 입기 좋은 스튜디오 쇼츠입니다.", sizes: ["S", "M", "L"] },
-  "cross-waist-shorts": { category: "Ballet Shorts", name: "CROSS WAIST SHORTS", price: 89000, image: "assets/products/cross-waist-shorts.png", description: "Sculpted waist detail", detail: "허리 라인을 안정적으로 잡아주는 크로스 웨이스트 쇼츠입니다.", sizes: ["S", "M", "L"] },
-  "pocket-training-shorts": { category: "Ballet Shorts", name: "POCKET TRAINING SHORTS", price: 94000, image: "assets/products/pocket-training-shorts.png", description: "Daily pocket design", detail: "수업 전후의 일상까지 고려한 포켓 디테일 쇼츠입니다.", sizes: ["S", "M", "L"] },
+  "ballet-shorts-black": { category: "Ballet Shorts", name: "BALLET SHORTS BLACK", price: 86000, image: "assets/products/ballet-shorts.png", description: "Black high-rise training shorts", detail: "블랙 컬러의 하이라이즈 발레 트레이닝 쇼츠입니다.", sizes: ["S", "M", "L"] },
+  "cross-waist-black": { category: "Ballet Shorts", name: "CROSS WAIST BLACK", price: 89000, image: "assets/products/cross-waist-shorts.png", description: "Black sculpted waist detail", detail: "블랙 컬러의 크로스 웨이스트 쇼츠입니다.", sizes: ["S", "M", "L"] },
+  "modal-studio-black": { category: "Ballet Shorts", name: "MODAL STUDIO BLACK", price: 82000, image: "assets/products/modal-studio-shorts.png", description: "Black soft modal touch", detail: "블랙 모달 소재로 만든 데일리 스튜디오 쇼츠입니다.", sizes: ["S", "M", "L"] },
+  "pocket-training-black": { category: "Ballet Shorts", name: "POCKET TRAINING BLACK", price: 94000, image: "assets/products/pocket-training-shorts.png", description: "Black daily pocket design", detail: "블랙 컬러의 포켓 디테일 트레이닝 쇼츠입니다.", sizes: ["S", "M", "L"] },
 
-  "wrap-knit-warmer": { category: "Warmers", name: "WRAP KNIT WARMER", price: 118000, image: "assets/products/wrap-knit-warmer.png", description: "Soft wrap knit", detail: "몸을 부드럽게 감싸는 랩 니트 워머입니다.", sizes: ["S", "M", "L"] },
-  "leg-warmer": { category: "Warmers", name: "LEG WARMER", price: 52000, image: "assets/products/leg-warmer.png", description: "Classic ballet warmer", detail: "클래식 발레 무드를 완성하는 레그 워머입니다.", sizes: ["ONE SIZE"] },
-  "arm-warmer": { category: "Warmers", name: "ARM WARMER", price: 48000, image: "assets/products/arm-warmer.png", description: "Light sleeve layer", detail: "티셔츠와 레오타드 위에 가볍게 더하는 암 워머입니다.", sizes: ["ONE SIZE"] },
-  "bolero-cardigan": { category: "Warmers", name: "BOLERO CARDIGAN", price: 128000, image: "assets/products/bolero-cardigan.png", description: "Studio-to-city layer", detail: "스튜디오에서 도시의 저녁까지 어울리는 볼레로 가디건입니다.", sizes: ["S", "M", "L"] },
+  "wrap-knit-ivory": { category: "Warmers", name: "WRAP KNIT IVORY", price: 118000, image: "assets/products/wrap-knit-warmer.png", description: "Ivory soft wrap knit", detail: "아이보리 컬러의 부드러운 랩 니트 워머입니다.", sizes: ["S", "M", "L"] },
+  "leg-warmer-pale-pink": { category: "Warmers", name: "LEG WARMER PALE PINK", price: 52000, image: "assets/products/leg-warmer.png", description: "Pale pink ballet warmer", detail: "페일 핑크 컬러의 클래식 레그 워머입니다.", sizes: ["ONE SIZE"] },
+  "arm-warmer-ivory": { category: "Warmers", name: "ARM WARMER IVORY", price: 48000, image: "assets/products/arm-warmer.png", description: "Ivory light sleeve layer", detail: "아이보리 컬러의 가벼운 암 워머입니다.", sizes: ["ONE SIZE"] },
+  "bolero-cardigan-ivory": { category: "Warmers", name: "BOLERO CARDIGAN IVORY", price: 128000, image: "assets/products/bolero-cardigan.png", description: "Ivory studio-to-city layer", detail: "아이보리 컬러의 볼레로 가디건입니다.", sizes: ["S", "M", "L"] },
 
-  "big-bag": { category: "Accessories", name: "BIG BAG", price: 168000, image: "assets/products/big-bag.png", description: "From morning class to evening flights", detail: "스튜디오 용품과 일상 소지품을 함께 담기 좋은 넉넉한 사이즈의 캐리올 백입니다.", sizes: ["ONE SIZE"] },
-  "cap": { category: "Accessories", name: "CAP", price: 58000, image: "assets/products/cap.png", description: "Logo point ball cap", detail: "발레코어 룩에 캐주얼한 균형을 더하는 미니멀 볼캡입니다.", sizes: ["ONE SIZE"] },
-  "ballet-tights": { category: "Accessories", name: "BALLET TIGHTS", price: 42000, image: "assets/products/ballet-tights.png", description: "Soft essential tights", detail: "부드러운 착용감과 은은한 컬러감으로 매일 입기 좋은 에센셜 발레 타이즈입니다.", sizes: ["S", "M", "L"] },
-  "ribbon-scrunchie": { category: "Accessories", name: "RIBBON SCRUNCHIE", price: 28000, image: "assets/products/ribbon-scrunchie.png", description: "Soft ribbon accent", detail: "포니테일과 번 스타일에 우아한 포인트를 주는 리본 스크런치입니다.", sizes: ["ONE SIZE"] },
-  "studio-socks": { category: "Accessories", name: "STUDIO SOCKS", price: 26000, image: "assets/products/studio-socks.png", description: "Daily ballet socks", detail: "수업 전후로 가볍게 착용하기 좋은 스튜디오 삭스입니다.", sizes: ["S", "M", "L"] },
-  "ballet-core-tee": { category: "Accessories", name: "ETOILE CORE TEE", price: 78000, image: "assets/products/ballet-core-tee.png", description: "Made for warm-up and coffee runs", detail: "부드러운 코튼 모달 소재로 만든 데일리 발레코어 티셔츠입니다.", sizes: ["S", "M", "L"] },
+  "big-bag-black": { category: "Accessories", name: "BIG BAG BLACK", price: 168000, image: "assets/products/big-bag.png", description: "Black studio-to-travel carryall", detail: "블랙 컬러의 넉넉한 캐리올 백입니다. 스튜디오, 오피스, 공항까지 이어집니다.", sizes: ["ONE SIZE"] },
+  "cap-black": { category: "Accessories", name: "CAP BLACK", price: 58000, image: "assets/products/cap.png", description: "Black logo point ball cap", detail: "블랙 컬러의 미니멀 로고 볼캡입니다.", sizes: ["ONE SIZE"] },
+  "ballet-tights-pink": { category: "Accessories", name: "BALLET TIGHTS PALE PINK", price: 42000, image: "assets/products/ballet-tights.png", description: "Pale pink essential tights", detail: "페일 핑크 컬러의 에센셜 발레 타이츠입니다.", sizes: ["S", "M", "L"] },
+  "ribbon-scrunchie-black": { category: "Accessories", name: "RIBBON SCRUNCHIE BLACK", price: 28000, image: "assets/products/ribbon-scrunchie.png", description: "Black ribbon accent", detail: "블랙 리본 포인트의 스크런치입니다.", sizes: ["ONE SIZE"] },
+  "studio-socks-pale-pink": { category: "Accessories", name: "STUDIO SOCKS PALE PINK", price: 26000, image: "assets/products/studio-socks.png", description: "Pale pink ballet socks", detail: "페일 핑크 컬러의 스튜디오 삭스입니다.", sizes: ["S", "M", "L"] },
+  "etoile-core-tee-ivory": { category: "Accessories", name: "ETOILE CORE TEE IVORY", price: 78000, image: "assets/products/ballet-core-tee.png", description: "Ivory warm-up and coffee run tee", detail: "아이보리 컬러의 코튼 모달 데일리 티셔츠입니다.", sizes: ["S", "M", "L"] },
 };
 
 const cartKey = "etoile-cart";
@@ -178,6 +180,21 @@ const setupSearch = () => {
   input.addEventListener("input", showResults);
 };
 
+const setupLanguageSwitch = () => {
+  const buttons = document.querySelectorAll(".language-switch button");
+  if (!buttons.length) return;
+  const savedLang = localStorage.getItem("etoile-language") || "KR";
+  buttons.forEach((button) => {
+    button.classList.toggle("active", button.textContent.trim() === savedLang);
+    button.addEventListener("click", () => {
+      const lang = button.textContent.trim();
+      localStorage.setItem("etoile-language", lang);
+      buttons.forEach((btn) => btn.classList.toggle("active", btn === button));
+      button.animate([{ opacity: 0.45 }, { opacity: 1 }], { duration: 180 });
+    });
+  });
+};
+
 const setupAuthForms = () => {
   document.querySelectorAll(".auth-form").forEach((form) => {
     form.addEventListener("submit", (event) => {
@@ -194,3 +211,4 @@ renderProductDetail();
 renderCart();
 setupSearch();
 setupAuthForms();
+setupLanguageSwitch();
