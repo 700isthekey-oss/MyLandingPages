@@ -180,35 +180,93 @@ const setupSearch = () => {
   input.addEventListener("input", showResults);
 };
 
+const translations = {
+KR: {
+heroEyebrow: "꿈꾸고 움직이는 모든 여성을 위해",
+heroTitle: "KEEP YOUR DREAMS ALIVE",
+heroSubtitle: "당신의 일상이 하나의 무대가 됩니다.",
+shopCollection: "컬렉션 보기",
+
+```
+campaignTitle: "꿈꾸고, 움직이고, 다시 시작하는 모든 여성을 위해.",
+aboutTitle: "움직임과 일상을 하나의 무대로.",
+
+guestbookTitle: "꿈꾸는 사람들의 기록",
+guestbookIntro: "ETOILE의 시작을 함께 지나간 사람들의 기록.",
+
+shopTitle: "카테고리별 컬렉션",
+```
+
+},
+
+EN: {
+heroEyebrow: "For every woman who dreams and moves",
+heroTitle: "KEEP YOUR DREAMS ALIVE",
+heroSubtitle: "Your everyday life becomes a stage.",
+shopCollection: "Shop the collection",
+
+```
+campaignTitle: "For every woman who dreams, moves, and begins again.",
+aboutTitle: "Movement and everyday life, brought onto one stage.",
+
+guestbookTitle: "Notes from the Dreamers",
+guestbookIntro: "A trace left by those who passed through the beginning of ETOILE.",
+
+shopTitle: "Collection by category",
+```
+
+}
+};
+
+function applyLanguage(lang) {
+document.querySelectorAll("[data-i18n]").forEach((element) => {
+const key = element.dataset.i18n;
+const value = translations[lang]?.[key];
+
+```
+if (value) {
+  element.textContent = value;
+}
+```
+
+});
+}
+
 const setupLanguageSwitch = () => {
-  const buttons = document.querySelectorAll(".language-switch button");
-  if (!buttons.length) return;
-  const savedLang = localStorage.getItem("etoile-language") || "KR";
-  buttons.forEach((button) => {
-    button.classList.toggle("active", button.textContent.trim() === savedLang);
-    button.addEventListener("click", () => {
-      const lang = button.textContent.trim();
-      localStorage.setItem("etoile-language", lang);
-      buttons.forEach((btn) => btn.classList.toggle("active", btn === button));
-      button.animate([{ opacity: 0.45 }, { opacity: 1 }], { duration: 180 });
-    });
-  });
-};
+const buttons = document.querySelectorAll(".language-switch button");
 
-const setupAuthForms = () => {
-  document.querySelectorAll(".auth-form").forEach((form) => {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const message = form.querySelector(".form-message");
-      if (message) message.textContent = form.dataset.success || "Saved.";
-    });
-  });
-};
+if (!buttons.length) return;
 
-renderShop();
-updateCartCount();
-renderProductDetail();
-renderCart();
-setupSearch();
-setupAuthForms();
-setupLanguageSwitch();
+const savedLang =
+localStorage.getItem("etoile-language") || "KR";
+
+buttons.forEach((button) => {
+const lang = button.textContent.trim();
+
+```
+button.classList.toggle(
+  "active",
+  lang === savedLang
+);
+
+button.addEventListener("click", () => {
+  localStorage.setItem(
+    "etoile-language",
+    lang
+  );
+
+  buttons.forEach((btn) =>
+    btn.classList.toggle(
+      "active",
+      btn === button
+    )
+  );
+
+  applyLanguage(lang);
+});
+```
+
+});
+
+applyLanguage(savedLang);
+};
