@@ -1143,3 +1143,11 @@ body {
   width: 100%;
   object-fit: cover;
 }
+.guestbook-section {
+  padding: 120px 36px 220px;
+  background: var(--stone);
+}
+
+.feature-band {
+  border-top: 0;
+}
