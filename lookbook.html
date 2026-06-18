@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lookbook | ETOILE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html">ETOILE</a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="./index.html">Home</a>
+      <a href="./lookbook.html">Lookbook</a>
+      <a href="./shop.html">Shop</a>
+      <a href="./guestbook.html">Guestbook</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="search-toggle" type="button" id="search-toggle" aria-label="Open search">Search</button>
+      <div class="language-switch" aria-label="Language switch">
+        <button type="button" class="active">KR</button>
+        <span>/</span>
+        <button type="button">EN</button>
+      </div>
+      <a class="login-link" href="./login.html">Login</a>
+      <a class="cart-pill" href="./cart.html" aria-label="Cart">Cart <span id="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <div class="search-panel" id="search-panel" hidden>
+    <div class="search-box">
+      <label for="product-search">Search ETOILE</label>
+      <div class="search-row">
+        <input id="product-search" type="search" placeholder="Search leotard, skirt, warmer, bag...">
+        <button type="button" id="search-close">Close</button>
+      </div>
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </div>
+
+  <main>
+    <section class="lookbook" id="lookbook">
+      <div class="section-heading wide">
+        <p class="section-kicker">Lookbook</p>
+        <h1>From studio mornings to evenings in the city.</h1>
+        <p>ETOILE follows the rhythm of a moving life.<br>A collection designed for women in motion.</p>
+      </div>
+
+      <div class="lookbook-grid compact-lookbook">
+        <article><img src="assets/lookbook/lookbook-studio-morning.png" alt="ETOILE studio morning look"><span>Studio morning</span></article>
+        <article><img src="assets/lookbook/lookbook-after-class.png" alt="ETOILE after class look"><span>After class</span></article>
+        <article><img src="assets/lookbook/lookbook-airport-moment.png" alt="ETOILE airport moment look"><span>Airport moment</span></article>
+        <article><img src="assets/lookbook/lookbook-coffee-run.png" alt="ETOILE coffee run look"><span>Coffee run</span></article>
+        <article><img src="assets/lookbook/lookbook-warm-up.png" alt="ETOILE warm-up look"><span>Warm-up</span></article>
+        <article><img src="assets/lookbook/lookbook-weekend-walk.png" alt="ETOILE weekend walk look"><span>Weekend walk</span></article>
+        <article><img src="assets/lookbook/lookbook-rehearsal.png" alt="ETOILE rehearsal look"><span>Rehearsal</span></article>
+        <article><img src="assets/lookbook/lookbook-evening-city.png" alt="ETOILE evening city look"><span>Evening city</span></article>
+        <article><img src="assets/lookbook/lookbook-travel-day.png" alt="ETOILE travel day look"><span>Travel day</span></article>
+        <article><img src="assets/lookbook/lookbook-off-duty.png" alt="ETOILE off duty look"><span>Off duty</span></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <strong>ETOILE</strong>
+      <span>KEEP YOUR DREAMS ALIVE</span>
+    </div>
+    <div class="footer-info">
+      <p><b>CEO</b> Chloe KWAK</p>
+      <p><b>BUSINESS LICENSE</b> 2026-06-17</p>
+      <p><b>E-MAIL</b> ETOILE@GMAIL.COM</p>
+      <p><b>ADDRESS</b> South Korea, Busan, Busanjin District, Jungang-daero, 668 에이원프라자 14F</p>
+    </div>
+    <a class="instagram-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Open Instagram">◎ Instagram</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
