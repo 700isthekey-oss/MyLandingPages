@@ -1042,3 +1042,84 @@ h1 {
     padding: 28px;
   }
 }
+  .auth-card {
+    padding: 28px;
+  }
+}
+
+/* ===== Guestbook ===== */
+
+.guestbook-section {
+  padding: 96px 36px;
+  background: var(--stone);
+}
+
+.guestbook-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.guestbook-section h2 {
+  margin: 8px 0 12px;
+  font-size: clamp(32px, 5vw, 56px);
+  letter-spacing: -0.04em;
+}
+
+.guestbook-intro {
+  margin-bottom: 36px;
+  color: var(--muted);
+}
+
+.guestbook-form {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.guestbook-form input,
+.guestbook-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--white);
+  padding: 16px;
+  font: inherit;
+}
+
+.guestbook-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.guestbook-form button {
+  border: 1px solid var(--black);
+  background: var(--black);
+  color: var(--white);
+  padding: 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.guestbook-list {
+  display: grid;
+  gap: 16px;
+}
+
+.guestbook-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 24px;
+  text-align: left;
+}
+
+.guestbook-message {
+  margin: 0 0 12px;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.guestbook-name {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}

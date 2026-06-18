@@ -100,7 +100,23 @@
         운동복처럼 편안하고, 외출복처럼 단정한 실루엣을 제안합니다.
       </p>
     </section>
+    <section id="guestbook" class="guestbook-section">
+      <div class="guestbook-inner">
+        <p class="section-kicker">Guestbook</p>
+        <h2>Notes from the Dreamers</h2>
+        <p class="guestbook-intro">
+          카이다의 시작을 함께 지나간 사람들의 기록.
+        </p>
 
+        <form id="guestbook-form" class="guestbook-form">
+          <input id="guestbook-name" type="text" placeholder="Name" maxlength="30" required>
+          <textarea id="guestbook-message" placeholder="Leave a note" maxlength="500" required></textarea>
+          <button type="submit">Leave a Note</button>
+        </form>
+
+        <div id="guestbook-list" class="guestbook-list"></div>
+      </div>
+    </section>
     <section class="feature-band">
       <div><strong>Free shipping</strong><span>70,000원 이상 구매 시</span></div>
       <div><strong>Easy return</strong><span>수령 후 7일 이내 가능</span></div>
@@ -132,5 +148,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="guestbook.js"></script>
 </body>
 </html>
