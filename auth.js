@@ -205,3 +205,8 @@ form.addEventListener("submit", async (event) => {
   alert("환영합니다.");
   window.location.href = "./index.html";
 });
+usernameInput.addEventListener("input", () => {
+  usernameInput.value = usernameInput.value
+    .replace(/[^\w]/g, "")
+    .toLowerCase();
+});
