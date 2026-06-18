@@ -257,5 +257,4 @@ updateCartCount();
 renderProductDetail();
 renderCart();
 setupSearch();
-setupAuthForms();
 setupLanguageSwitch();
