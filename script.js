@@ -180,93 +180,82 @@ const setupSearch = () => {
   input.addEventListener("input", showResults);
 };
 
-const translations = {
-KR: {
-heroEyebrow: "꿈꾸고 움직이는 모든 여성을 위해",
-heroTitle: "KEEP YOUR DREAMS ALIVE",
-heroSubtitle: "당신의 일상이 하나의 무대가 됩니다.",
-shopCollection: "컬렉션 보기",
-
-```
-campaignTitle: "꿈꾸고, 움직이고, 다시 시작하는 모든 여성을 위해.",
-aboutTitle: "움직임과 일상을 하나의 무대로.",
-
-guestbookTitle: "꿈꾸는 사람들의 기록",
-guestbookIntro: "ETOILE의 시작을 함께 지나간 사람들의 기록.",
-
-shopTitle: "카테고리별 컬렉션",
-```
-
-},
-
-EN: {
-heroEyebrow: "For every woman who dreams and moves",
-heroTitle: "KEEP YOUR DREAMS ALIVE",
-heroSubtitle: "Your everyday life becomes a stage.",
-shopCollection: "Shop the collection",
-
-```
-campaignTitle: "For every woman who dreams, moves, and begins again.",
-aboutTitle: "Movement and everyday life, brought onto one stage.",
-
-guestbookTitle: "Notes from the Dreamers",
-guestbookIntro: "A trace left by those who passed through the beginning of ETOILE.",
-
-shopTitle: "Collection by category",
-```
-
-}
-};
-
-function applyLanguage(lang) {
-document.querySelectorAll("[data-i18n]").forEach((element) => {
-const key = element.dataset.i18n;
-const value = translations[lang]?.[key];
-
-```
-if (value) {
-  element.textContent = value;
-}
-```
-
-});
-}
-
 const setupLanguageSwitch = () => {
-const buttons = document.querySelectorAll(".language-switch button");
+  const buttons = document.querySelectorAll(".language-switch button");
+  if (!buttons.length) return;
 
-if (!buttons.length) return;
+  const translations = {
+    KR: {
+      heroEyebrow: "꿈꾸고 움직이는 모든 여성을 위해",
+      heroSubtitle: "당신의 일상이 하나의 무대가 됩니다.",
+      shopCollection: "컬렉션 보기",
+      campaignTitle: "꿈꾸고, 움직이고, 다시 시작하는 모든 여성을 위해.",
+      campaignBody: "ETOILE은 발레의 조용한 훈련과 일상 속 자신감에서 영감을 받은 브랜드입니다. 스튜디오, 거리, 주말과 여행의 순간을 하나의 정제된 옷장으로 제안합니다.",
+      bigBagBody: "스튜디오, 오피스, 주말까지. 움직이는 하루를 위한 캐리올 백.",
+      viewProduct: "제품 보기",
+      lookbookTitle: "스튜디오의 아침부터 도시의 저녁까지.",
+      lookbookBody: "ETOILE은 움직이는 하루의 리듬을 따라갑니다.<br>움직이는 여성을 위한 컬렉션입니다.",
+      aboutTitle: "움직임과 일상을 하나의 무대로.",
+      aboutBody: "ETOILE은 발레코어 감성을 바탕으로 한 프리미엄 여성 애슬레저 브랜드입니다. 운동복처럼 편안하고, 외출복처럼 단정한 실루엣을 제안합니다.",
+      guestbookTitle: "꿈꾸는 사람들의 기록",
+      guestbookIntro: "ETOILE의 시작을 함께 지나간 사람들의 기록.",
+      leaveNote: "기록 남기기",
+      shopTitle: "카테고리별 컬렉션",
+      shopBody: "레오타드, 스커트, 발레 쇼츠, 워머, 기타용품까지 ETOILE의 움직이는 하루를 위한 제품군입니다."
+    },
+    EN: {
+      heroEyebrow: "For every woman who dreams and moves",
+      heroSubtitle: "Your everyday life becomes a stage.",
+      shopCollection: "Shop the collection",
+      campaignTitle: "For every woman who dreams, moves, and begins again.",
+      campaignBody: "ETOILE is inspired by the quiet discipline of ballet and the confidence carried into everyday life. Studio, street, weekend and travel are gathered into one refined wardrobe.",
+      bigBagBody: "Studio. Office. Weekend. A carryall designed for a moving life.",
+      viewProduct: "View product",
+      lookbookTitle: "From studio mornings to evenings in the city.",
+      lookbookBody: "ETOILE follows the rhythm of a moving life.<br>A collection designed for women in motion.",
+      aboutTitle: "Movement and everyday life, brought onto one stage.",
+      aboutBody: "ETOILE is a premium women’s athleisure brand inspired by balletcore. It proposes silhouettes that feel as comfortable as activewear and as polished as everyday clothing.",
+      guestbookTitle: "Notes from the Dreamers",
+      guestbookIntro: "A trace left by those who passed through the beginning of ETOILE.",
+      leaveNote: "Leave a Note",
+      shopTitle: "Collection by category",
+      shopBody: "From leotards and skirts to ballet shorts, warmers and accessories, ETOILE offers pieces for a moving day."
+    }
+  };
 
-const savedLang =
-localStorage.getItem("etoile-language") || "KR";
+  const applyLanguage = (lang) => {
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.dataset.i18n;
+      const value = translations[lang]?.[key];
 
-buttons.forEach((button) => {
-const lang = button.textContent.trim();
+      if (!value) return;
 
-```
-button.classList.toggle(
-  "active",
-  lang === savedLang
-);
+      if (value.includes("<br>")) {
+        element.innerHTML = value;
+      } else {
+        element.textContent = value;
+      }
+    });
 
-button.addEventListener("click", () => {
-  localStorage.setItem(
-    "etoile-language",
-    lang
-  );
+    buttons.forEach((button) => {
+      button.classList.toggle("active", button.textContent.trim() === lang);
+    });
 
-  buttons.forEach((btn) =>
-    btn.classList.toggle(
-      "active",
-      btn === button
-    )
-  );
+    localStorage.setItem("etoile-language", lang);
+  };
 
-  applyLanguage(lang);
-});
-```
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      applyLanguage(button.textContent.trim());
+    });
+  });
 
-});
-
-applyLanguage(savedLang);
+  applyLanguage(localStorage.getItem("etoile-language") || "KR");
 };
+renderShop();
+updateCartCount();
+renderProductDetail();
+renderCart();
+setupSearch();
+setupAuthForms();
+setupLanguageSwitch();
