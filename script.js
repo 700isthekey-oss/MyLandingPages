@@ -130,8 +130,10 @@ const renderCart = () => {
 const renderProductDetail = () => {
   if (!detailImage || !detailName || !detailDescription || !detailPrice || !detailAddButton || !sizeSelect) return;
   const params = new URLSearchParams(window.location.search);
-  const productId = params.get("id") || "signature-leotard";
-  const product = products[productId] || products["signature-leotard"];
+const productId = params.get("id");
+if (!productId || !products[productId]) return;
+
+const product = products[productId];
   document.title = `${product.name} | ETOILE`;
   detailImage.src = product.image;
   detailImage.alt = product.name;
