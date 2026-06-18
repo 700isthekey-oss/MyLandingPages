@@ -1151,3 +1151,56 @@ body {
 .feature-band {
   border-top: 0;
 }
+.guestbook-comments {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.guestbook-comment {
+  padding: 12px 14px;
+  background: var(--stone);
+}
+
+.guestbook-comment strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.guestbook-comment p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.comment-form {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.comment-form input {
+  min-height: 38px;
+  border: 1px solid var(--line);
+  padding: 0 10px;
+  font: inherit;
+}
+
+.comment-form button {
+  border: 1px solid var(--black);
+  background: var(--black);
+  color: var(--white);
+  padding: 0 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .comment-form {
+    grid-template-columns: 1fr;
+  }
+}
