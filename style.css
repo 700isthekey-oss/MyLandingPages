@@ -1123,3 +1123,23 @@ h1 {
   color: var(--muted);
   font-weight: 700;
 }
+html,
+body {
+  overflow-x: hidden;
+}
+
+.lookbook-grid,
+.product-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.lookbook-grid article,
+.product-card {
+  min-width: 0;
+}
+
+.lookbook-grid img,
+.product-card img {
+  width: 100%;
+  object-fit: cover;
+}
