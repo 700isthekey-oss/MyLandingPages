@@ -387,6 +387,11 @@ h1 {
   min-width: 0;
 }
 
+.lookbook-grid a {
+  display: block;
+  color: inherit;
+}
+
 .lookbook-grid img {
   width: 100%;
   aspect-ratio: 4 / 5;
