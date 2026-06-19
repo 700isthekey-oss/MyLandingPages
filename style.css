@@ -308,6 +308,7 @@ h1 {
   margin: 0 auto;
   color: var(--muted);
   font-size: 18px;
+  text-align: center;
 }
 
 .big-bag-feature {
@@ -1133,6 +1134,10 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.compact-lookbook {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .lookbook-grid article,
 .product-card {
   min-width: 0;
@@ -1202,6 +1207,16 @@ body {
 @media (max-width: 720px) {
   .comment-form {
     grid-template-columns: 1fr;
+  }
+
+  .compact-lookbook {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  .compact-lookbook {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 .field-help {
