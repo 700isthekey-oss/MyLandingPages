@@ -981,7 +981,7 @@ h1 {
 
 @media (max-width: 720px) {
   body {
-    padding-top: 126px;
+    padding-top: 220px;
   }
 
   .site-header {
@@ -991,19 +991,69 @@ h1 {
   }
 
   .search-panel {
-    inset: 126px 0 auto 0;
+    inset: 220px 0 auto 0;
+  }
+
+  .brand {
+    flex: 0 0 calc(100vw - 36px);
+    max-width: 100%;
   }
 
   .nav {
     order: 3;
-    width: 100%;
-    justify-content: space-between;
-    overflow-x: auto;
+    flex: 0 0 calc(100vw - 36px);
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 13px;
   }
 
   .header-actions {
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    order: 2;
+    flex: 0 0 calc(100vw - 36px);
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .cart-pill {
+    min-height: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    justify-content: center;
+    gap: 5px;
+  }
+
+  #cart-count {
+    min-width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+
+  .section-heading p:last-child,
+  .shop-section p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-all;
+  }
+
+  .section-heading,
+  .section-heading.wide {
+    width: 100%;
+    max-width: calc(100vw - 36px);
+    min-width: 0;
+  }
+
+  .section-heading > * {
+    min-width: 0;
   }
 
   .hero,
@@ -1033,6 +1083,11 @@ h1 {
   .section-heading h2,
   .intro h2 {
     font-size: 30px;
+  }
+
+  .product-copy h1 {
+    font-size: 28px;
+    overflow-wrap: anywhere;
   }
 
   .feature-band {
