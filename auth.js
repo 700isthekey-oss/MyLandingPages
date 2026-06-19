@@ -135,6 +135,13 @@ confirmInput.addEventListener("input", () => {
 
   updateSubmitState();
 });
+confirmInput.addEventListener("paste", () => {
+  setTimeout(() => {
+    confirmInput.dispatchEvent(new Event("input"));
+  }, 0);
+});
+
+updateSubmitState();
 
 document.querySelectorAll(".toggle-password").forEach((button) => {
   button.addEventListener("click", () => {
