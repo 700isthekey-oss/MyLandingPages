@@ -496,12 +496,15 @@ h1 {
 
 .product-link {
   display: block;
+  overflow: hidden;
 }
 
 .product-card img {
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center 42%;
   background: var(--stone);
+  transform: scale(1.12);
 }
 
 .product-info {
