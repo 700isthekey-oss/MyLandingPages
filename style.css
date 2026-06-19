@@ -20,6 +20,7 @@ html {
 
 body {
   margin: 0;
+  padding-top: 72px;
   color: var(--black);
   background: var(--white);
   font-family: "Inter", Arial, "Noto Sans KR", sans-serif;
@@ -43,9 +44,11 @@ select {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 20;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -977,10 +980,18 @@ h1 {
 }
 
 @media (max-width: 720px) {
+  body {
+    padding-top: 126px;
+  }
+
   .site-header {
     flex-wrap: wrap;
     gap: 12px;
     padding: 14px 18px;
+  }
+
+  .search-panel {
+    inset: 126px 0 auto 0;
   }
 
   .nav {
