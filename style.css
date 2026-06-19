@@ -295,9 +295,9 @@ h1 {
 }
 
 .campaign h2 {
-  max-width: 960px;
+  max-width: 1180px;
   margin: 0 auto 22px;
-  font-size: clamp(40px, 6vw, 82px);
+  font-size: clamp(40px, 5.2vw, 72px);
   line-height: 1.02;
   font-weight: 900;
   letter-spacing: -0.04em;
