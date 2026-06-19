@@ -284,6 +284,10 @@ h1 {
   color: var(--white);
 }
 
+.hero .primary-link {
+  display: none;
+}
+
 .campaign {
   padding: 110px 36px;
   text-align: center;
@@ -1038,10 +1042,6 @@ h1 {
     justify-self: start;
   }
 
-  .auth-card {
-    padding: 28px;
-  }
-}
   .auth-card {
     padding: 28px;
   }
